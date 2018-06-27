@@ -51,7 +51,7 @@ public class ExitAction extends AbstractDropletAction {
 	public void actionPerformed(final ActionEvent event) {
 		// TODO brenner: warn about unsaved changes
 		
-		log.debug("Shutting down ...");
+		//log.debug("Shutting down ...");
 		
 		// save data to configuration
 		IMetadata metadata = getDropletContext().getMetadata();
@@ -59,7 +59,7 @@ public class ExitAction extends AbstractDropletAction {
 		Configuration.setMetadataTags(metadata.getTags());
 		Configuration.setSerialCommPort(getDropletContext().getPort());
 		
-		log.debug("Successfully saved settings");
+		//log.debug("Successfully saved settings");
 		
 		getFrame().dispose();
 		System.exit(0);

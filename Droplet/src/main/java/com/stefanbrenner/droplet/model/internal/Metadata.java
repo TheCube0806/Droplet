@@ -50,5 +50,17 @@ public class Metadata extends AbstractModelObject implements IMetadata {
 	public final void setTags(final String tags) {
 		firePropertyChange(IMetadata.PROPERTY_TAGS, this.tags, this.tags = tags);
 	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getTags() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

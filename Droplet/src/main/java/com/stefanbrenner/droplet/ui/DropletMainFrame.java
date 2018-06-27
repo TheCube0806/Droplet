@@ -46,6 +46,8 @@ import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import org.hibernate.validator.internal.util.logging.Log;
+
 import com.apple.mrj.MRJAboutHandler;
 import com.apple.mrj.MRJApplicationUtils;
 import com.apple.mrj.MRJPrefsHandler;
@@ -92,18 +94,18 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 	public static void main(final String[] args) throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException, UnsupportedLookAndFeelException {
 		
-		log.info("Droplet - Toolkit for High-Speed-Photography");
-		log.info("Version 0.1");
-		log.info("Open Source Project created by Stefan Brenner 2012");
-		log.info("http://www.droplet.at");
-		log.info("==================================================");
-		log.info("Starting ...");
+		//log.info("Droplet - Toolkit for High-Speed-Photography");
+		//log.info("Version 0.1");
+		//log.info("Open Source Project created by Stefan Brenner 2012");
+		//log.info("http://www.droplet.at");
+		//log.info("==================================================");
+		//log.info("Starting ...");
 		
 		// TODO brenner: move to own class
 		// log system properties
 		Properties properties = System.getProperties();
 		Collections.list(properties.keys()).forEach(prop -> {
-			log.debug("{}: {}", prop, properties.get(prop));
+			//log.debug("{}: {}", prop, properties.get(prop));
 		});
 		
 		// TODO brenner: make language editable in configurations
@@ -129,12 +131,12 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 				}
 			}
 		} catch (Exception e) {
-			log.warn("Nimbus L&F not found!");
+			//log.warn("Nimbus L&F not found!");
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		}
 		
 		// initialize DropletConfig
-		log.info("initialize config");
+		//log.info("initialize config");
 		new ConfigBuilder<DropletConfig>(DropletConfig.class).build();
 		
 		EventQueue.invokeLater(new Runnable() {
@@ -144,7 +146,7 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 					DropletMainFrame frame = new DropletMainFrame();
 					frame.setVisible(true);
 				} catch (Exception e) {
-					log.error("A fatal error occured: ", e);
+					//log.error("A fatal error occured: ", e);
 					e.printStackTrace();
 				}
 			}
@@ -156,7 +158,7 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 	 */
 	public DropletMainFrame() {
 		
-		log.info("start UI");
+		//log.info("start UI");
 		
 		// create new context
 		dropletContext = new DropletContext();
@@ -222,7 +224,7 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 		});
 		
 		// register action shortcuts
-		log.debug("Register action shortcuts");
+		//log.debug("Register action shortcuts");
 		// TODO brenner: don't consume keys in JTextComponents
 		contentPane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("SPACE"), "start"); //$NON-NLS-1$ //$NON-NLS-2$
 		contentPane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("F4"), "start"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -238,7 +240,7 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 		});
 		
 		// set default fonts
-		log.debug("set default fonts");
+		//log.debug("set default fonts");
 		Enumeration<Object> keys = UIManager.getDefaults().keys();
 		while (keys.hasMoreElements()) {
 			Object key = keys.nextElement();
@@ -249,7 +251,7 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 		}
 		
 		// register handlers for mac events
-		log.debug("register handlers for mac events");
+		//log.debug("register handlers for mac events");
 		if (UiUtils.isMacOS()) {
 			MRJApplicationUtils.registerAboutHandler(this);
 			MRJApplicationUtils.registerQuitHandler(this);
@@ -276,7 +278,7 @@ public class DropletMainFrame extends JFrame implements MRJAboutHandler, MRJQuit
 		// add welcome message to logging panel
 		dropletContext.addLoggingMessage("Welcome to Droplet!");
 		
-		log.info("Droplet started successfully!");
+		//log.info("Droplet started successfully!");
 		
 	}
 	

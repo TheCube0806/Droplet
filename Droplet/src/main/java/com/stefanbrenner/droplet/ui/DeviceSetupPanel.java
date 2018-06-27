@@ -81,7 +81,7 @@ public class DeviceSetupPanel extends JPanel {
 	
 	private void updatePanels() {
 		// remove previous components
-		container.removeAll();
+		/*container.removeAll();
 		// add components
 		container.add(Box.createRigidArea(new Dimension(10, 0)));
 		// add devices panels
@@ -104,7 +104,7 @@ public class DeviceSetupPanel extends JPanel {
 		container.add(Box.createHorizontalGlue());
 		
 		container.revalidate();
-		container.repaint();
+		container.repaint();*/
 		
 	}
 	

@@ -105,7 +105,7 @@ public class CommunicationPanel extends JPanel {
 		add(lblStatus);
 		
 		// set communication service from configuration
-		log.info("load communication service from config");
+		//log.info("load communication service from config");
 		setCommService(Configuration.getSerialCommProvider());
 		
 		// add listener to selected communication provider
@@ -175,7 +175,7 @@ public class CommunicationPanel extends JPanel {
 	}
 	
 	private void setCommService(final ISerialCommunicationService commService) {
-		log.info("set new communication service: {}", commService.getName());
+		//log.info("set new communication service: {}", commService.getName());
 		this.commService = commService;
 		setPorts(commService.getPorts());
 	}

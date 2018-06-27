@@ -46,6 +46,24 @@ public class DeviceComperationTest {
 		protected String getDeviceType() {
 			return null;
 		}
+
+		@Override
+		public String getNumber() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public String getName() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public String getDescription() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
 	
 	class NewDevice1Comparator extends DropletDeviceComparator {
@@ -76,6 +94,24 @@ public class DeviceComperationTest {
 	class NewDevice2 extends AbstractDevice {
 		@Override
 		protected String getDeviceType() {
+			return null;
+		}
+
+		@Override
+		public String getNumber() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public String getName() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public String getDescription() {
+			// TODO Auto-generated method stub
 			return null;
 		}
 	}

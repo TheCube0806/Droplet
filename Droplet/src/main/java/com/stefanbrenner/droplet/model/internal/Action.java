@@ -57,5 +57,17 @@ public class Action extends AbstractModelObject implements IAction {
 	public void addOffset(final Integer offset) {
 		firePropertyChange(IAction.PROPERTY_OFFSET, this.offset, this.offset += offset);
 	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Integer getOffset() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

@@ -94,13 +94,13 @@ public class SendAction extends AbstractSerialAction {
 	
 	// TODO brenner: add listener to actions
 	private void initListener() {
-		PropertyChangeListener listener = new PropertyChangeListener() {
+		/*PropertyChangeListener listener = new PropertyChangeListener() {
 			@Override
 			public void propertyChange(final PropertyChangeEvent event) {
 				updateVisibility();
 			}
 		};
-		getDroplet().addPropertyChangeListener(IDroplet.ASSOCIATION_DEVICES, listener);
+		getDroplet().addPropertyChangeListener(IDroplet.ASSOCIATION_DEVICES, listener);*/
 	}
 	
 	private void updateVisibility() {

@@ -149,5 +149,53 @@ public class DropletContext extends AbstractModelObject implements IDropletConte
 	public void setRoundDelay(final Integer roundDelay) {
 		firePropertyChange(IDropletContext.PROPERTY_ROUND_DELAY, this.roundDelay, this.roundDelay = roundDelay);
 	}
+
+	@Override
+	public String getPort() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public File getFile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IDroplet getDroplet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setLastSetMessage(String lastSetMessage) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getLastSetMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getRounds() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getRoundDelay() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IMetadata getMetadata() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

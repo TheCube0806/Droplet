@@ -79,13 +79,13 @@ public class ArduinoService implements ISerialCommunicationService, SerialPortEv
 		try {
 			dropletContext = context;
 			
-			log.debug("Connect to port: " + portId);
+			//log.debug("Connect to port: " + portId);
 			
 			// try to open a connection to the serial port
 			connSerialPort = new NRSerialPort(portId, DATA_RATE);
 			
 			if (!connSerialPort.connect()) {
-				log.error("Error connecting to port {}", portId);
+				//log.error("Error connecting to port {}", portId);
 				return false;
 			}
 			
@@ -97,12 +97,12 @@ public class ArduinoService implements ISerialCommunicationService, SerialPortEv
 			connSerialPort.addEventListener(this);
 			connSerialPort.notifyOnDataAvailable(true);
 			
-			log.info("Connection to port " + portId + " successful established");
+			//log.info("Connection to port " + portId + " successful established");
 			
 			return true;
 			
 		} catch (TooManyListenersException e) {
-			log.error("Error connecting to port {}", portId, e);
+			//log.error("Error connecting to port {}", portId, e);
 		}
 		
 		return false;
@@ -112,7 +112,7 @@ public class ArduinoService implements ISerialCommunicationService, SerialPortEv
 	public synchronized void close() {
 		if (connSerialPort != null) {
 			
-			log.debug("close connection to port {}", connSerialPort.getSerialPortInstance().getName());
+			//log.debug("close connection to port {}", connSerialPort.getSerialPortInstance().getName());
 			
 			connSerialPort.removeEventListener();
 			connSerialPort.disconnect();
@@ -139,11 +139,11 @@ public class ArduinoService implements ISerialCommunicationService, SerialPortEv
 				// add message to model
 				String message = new String(buffer, 0, len);
 				
-				log.debug("Received message: {}", message);
+				//log.debug("Received message: {}", message);
 				
 				dropletContext.addLoggingMessage(message);
 			} catch (IOException e) {
-				log.error("Error receiving data", e);
+				//log.error("Error receiving data", e);
 			}
 		}
 	}
@@ -157,7 +157,7 @@ public class ArduinoService implements ISerialCommunicationService, SerialPortEv
 				// split message by newline
 				for (String msg : StringUtils.split(message, NEWLINE)) {
 					
-					log.debug("send message: {}", msg);
+					//log.debug("send message: {}", msg);
 					
 					// send byte by byte
 					// for (byte b : msg.getBytes()) {
@@ -191,7 +191,7 @@ public class ArduinoService implements ISerialCommunicationService, SerialPortEv
 				throw new RuntimeException("Not connected to a port!"); //$NON-NLS-1$
 			}
 		} catch (IOException e) {
-			log.error("Error sending data", e);
+			//log.error("Error sending data", e);
 		}
 	}
 	

@@ -36,5 +36,23 @@ public class Button extends AbstractDevice implements IButton {
 	protected String getDeviceType() {
 		return "Button";
 	}
+
+	@Override
+	public String getNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

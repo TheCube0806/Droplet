@@ -50,5 +50,23 @@ public class DurationAction extends Action implements IDurationAction {
 	public void addDuration(final Integer duration) {
 		firePropertyChange(IDurationAction.PROPERTY_DURATION, this.duration, this.duration += duration);
 	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Integer getOffset() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getDuration() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

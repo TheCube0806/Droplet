@@ -136,5 +136,29 @@ public class Droplet extends AbstractModelObject implements IDroplet {
 		// reset all devices
 		devices.forEach(IDevice::reset);
 	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<IDevice> getDevices() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DropletDeviceComparator getDeviceComparator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

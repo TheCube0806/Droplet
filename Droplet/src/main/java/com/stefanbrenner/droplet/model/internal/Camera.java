@@ -19,8 +19,11 @@
  *******************************************************************************/
 package com.stefanbrenner.droplet.model.internal;
 
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.stefanbrenner.droplet.model.IAction;
 import com.stefanbrenner.droplet.model.ICamera;
 import com.stefanbrenner.droplet.model.IDurationAction;
 
@@ -41,6 +44,30 @@ public class Camera extends AbstractActionDevice implements ICamera {
 	@Override
 	public IDurationAction createNewAction() {
 		return new DurationAction();
+	}
+
+	@Override
+	public List<IAction> getActions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

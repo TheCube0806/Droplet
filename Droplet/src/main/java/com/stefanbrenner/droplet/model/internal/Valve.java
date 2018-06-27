@@ -20,11 +20,13 @@
 package com.stefanbrenner.droplet.model.internal;
 
 import java.awt.Color;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import com.stefanbrenner.droplet.model.IAction;
 import com.stefanbrenner.droplet.model.IDurationAction;
 import com.stefanbrenner.droplet.model.IValve;
 import com.stefanbrenner.droplet.xml.ColorAdapter;
@@ -60,6 +62,36 @@ public class Valve extends AbstractActionDevice implements IValve {
 	@Override
 	public IDurationAction createNewAction() {
 		return new DurationAction();
+	}
+
+	@Override
+	public List<IAction> getActions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Color getColor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

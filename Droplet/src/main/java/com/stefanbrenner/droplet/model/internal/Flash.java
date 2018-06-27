@@ -20,6 +20,7 @@
 package com.stefanbrenner.droplet.model.internal;
 
 import java.awt.Color;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -60,6 +61,36 @@ public class Flash extends AbstractActionDevice implements IFlash {
 	@Override
 	public IAction createNewAction() {
 		return new Action();
+	}
+
+	@Override
+	public List<IAction> getActions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Color getColor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
